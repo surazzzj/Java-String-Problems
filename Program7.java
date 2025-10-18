@@ -9,9 +9,9 @@ public class Program7 {
         String str = input.nextLine();
         String result = "";
 
-        for(int i=0; i<str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if(result.indexOf(ch) == -1){
+            if (result.indexOf(ch) == -1) {
                 result += ch;
             }
         }
@@ -19,6 +19,3 @@ public class Program7 {
         System.out.println("Result: " + result);
     }
 }
-
-
-

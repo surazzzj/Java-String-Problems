@@ -19,8 +19,6 @@ public class Program2 {
     }
 }
 
-
-
 // Using inbuilt methods
 
 public class Program2 {
@@ -31,9 +29,9 @@ public class Program2 {
         StringBuilder rev = new StringBuilder(str).reverse();
         String revString = rev.toString();
 
-        if(str.equals(revString)){
+        if (str.equals(revString)) {
             System.out.println("Pallindrome");
-        }else{
+        } else {
             System.out.println("Not Pallindrome");
         }
     }
