@@ -1,4 +1,4 @@
-// Remove Duplicate Characters
+// Remove Duplicate Characters from string
 
 import java.util.Scanner;
 

@@ -24,7 +24,6 @@ public class Program8 {
 }
 
 // using inbuilt Methods
-
 public class Program8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
