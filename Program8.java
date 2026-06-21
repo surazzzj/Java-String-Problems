@@ -40,4 +40,3 @@ public class Program8 {
         }
         System.out.print("sb: " + sb);
     }
-}

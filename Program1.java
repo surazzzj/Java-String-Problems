@@ -1,28 +1,39 @@
 // Reverse a String
 
-import java.util.Scanner;
-
+// Efficient manual Two-pointer approach -
 public class Program1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your Text: ");
-        String str = sc.nextLine();
-        String rev = "";
+        String str = "Suraj";
+        char[] charArr = str.toCharArray();
 
-        for (int i = str.length() - 1; i >= 0; i--) {
-            rev += str.charAt(i);
+        int left=0, right = charArr.length-1;
+
+        while(left < right) {
+            char temp = charArr[left];
+            charArr[left] = charArr[right];
+            charArr[right] = temp;
+            left++;
+            right--;
         }
-        System.out.println(rev);
+
+        System.err.println("Rversed String: " + new String(charArr));
     }
 }
+
+// Time: O(n)
+// Space: O(n)
+
+
 
 // Using inbuilt Methods
 public class Program1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your Text: ");
-        String str = sc.nextLine();
-        StringBuilder newStr = new StringBuilder(str);
-        System.out.println(newStr.reverse());
+        String str = "rocky";
+        String reversed = new StringBuilder(str).reverse().toString();
+        System.err.println("Reversed String: " + reversed);
     }
 }
+
+
+// Time: O(n)
+// Space: O(n)

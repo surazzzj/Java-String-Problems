@@ -1,38 +1,38 @@
 // Check if String is Palindrome - A palindrome reads same backward & forward (like "madam", "racecar").
 
-import java.util.Scanner;
-
 public class Program2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter Text: ");
-        String str = input.nextLine();
-        boolean isPallindrome = true;
+        String str = "racecar";
 
-        for (int i = 0; i <= str.length() / 2; i++) {
-            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
-                isPallindrome = false;
+        int left = 0, right = str.length() - 1;
+        boolean isPalindrome = true;
+
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                isPalindrome = false;
                 break;
             }
+            left++;
+            right--;
         }
-        System.out.println(isPallindrome ? "Pallindrome" : "Not Pallindrome");
+        System.out.println(isPalindrome ? "Palindrome" : "Not Palindrome");
     }
 }
 
-// Using inbuilt methods
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Using inbuilt methods-
 
 public class Program2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter Text: ");
-        String str = input.nextLine();
-        StringBuilder rev = new StringBuilder(str).reverse();
-        String revString = rev.toString();
 
-        if (str.equals(revString)) {
-            System.out.println("Pallindrome");
-        } else {
-            System.out.println("Not Pallindrome");
-        }
+        String str = input.nextLine();
+        String reversed = new StringBuilder(str).reverse().toString();
+        System.out.println(str.equals(revString) ? "Palindrome" : "Not Palindrome");
+
     }
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
